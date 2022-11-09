@@ -5,6 +5,8 @@ class BcryptHashService(HashService):
     def __init__(self, salt):
         self.salt = salt
 
+    def test(self): pass
+
     def hash(self, password):
         return bcrypt.hashpw(password.encode('utf-8'), self.salt)
 
